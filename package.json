@@ -1,0 +1,28 @@
+{
+  "name": "node_js_challenge",
+  "version": "1.0.0",
+  "description": "wetube challenge",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annjj322/node_js_challenge.git"
+  },
+  "author": "junje",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/annjj322/node_js_challenge/issues"
+  },
+  "homepage": "https://github.com/annjj322/node_js_challenge#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/node": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "nodemon": "^2.0.14"
+  }
+}
