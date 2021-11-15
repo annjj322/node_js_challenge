@@ -1,22 +1,12 @@
 import express from "express";
-
-const PORT = 4400;
+import globalRouter from "./routers/globalRouter";
+import storyRouter from "./routers/storyRouter";
+import userRouter from "./routers/userRouter";
 
 const app = express();
 
-const home = (req, res) => res.send("Hello");
+app.use("/", globalRouter);
+app.use("/stories", storyRouter);
+app.use("/users", userRouter);
 
-const login = (req, res) => res.send("Hi");
-
-const about = (req, res) => res.send("About");
-
-const contact = (req, res) => res.send("Contact");
-
-app.get("/", home);
-app.get("/login", login);
-app.get("/about", about);
-app.get("/contact", contact);
-
-const handleListening = () => console.log("Server is Listening");
-
-app.listen(PORT, handleListening);
+app.listen(4400, () => console.log(`Listening!`));
